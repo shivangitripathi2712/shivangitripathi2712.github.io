@@ -9,6 +9,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .pub-desc {
+      display: block;
+      margin-top: 0.35rem;
+      color: #555;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+  </style>
 </head>
 
 <body>
@@ -130,18 +139,30 @@
           <li>
             <span class="pub-title">Detecting and Correcting Hallucinations in Paragraph-Level Text with Ensemble-Based Evaluation</span>
             <span class="pub-venue">IEEE DISTILL, 2025</span>
+            <p class="pub-desc">
+              This work proposes an ensemble-based evaluation and correction pipeline that combines BERT-style classifiers, semantic similarity, NLI, and LLM-as-judge signals to detect hallucinations in paragraph-level generations and guide targeted revisions, improving factual consistency of long-form outputs. [web:1][web:20]
+            </p>
           </li>
           <li>
             <span class="pub-title">Paragraph-Level Hallucination Detection for LLMs in Networked Systems</span>
             <span class="pub-venue">Proceedings of IEEE CCNC, 2026</span>
+            <p class="pub-desc">
+              This project models LLM deployments in networked and edge environments and introduces paragraph-level hallucination detection methods and metrics tailored to bandwidth, latency, and resource constraints, enabling more trustworthy text generation in realistic system pipelines. [web:1]
+            </p>
           </li>
           <li>
             <span class="pub-title">REVISE: A Framework for Paragraph-Level Misinformation Correction in Large Language Models</span>
             <span class="pub-venue">Proceedings of CIOCSE, 2025</span>
+            <p class="pub-desc">
+              REVISE is a structured framework that decomposes paragraphs into verifiable claims, generates verification questions, retrieves external evidence, and uses a gated decision mechanism to drive LLM-based rewriting, enabling systematic correction of misinformation while preserving coherent, context-aware narratives. [web:1][web:22]
+            </p>
           </li>
           <li>
             <span class="pub-title">Assessing Hallucination in LLMs under Adversarial Attacks</span>
             <span class="pub-venue">Proceedings of MOBISECSERV, 2024</span>
+            <p class="pub-desc">
+              This study evaluates open-source models such as Vicuna-7B and LLaMA2-7B-chat under prompt-based adversarial attacks, quantifying attack success rates and loss shifts to show how weak semantic and out-of-distribution perturbations significantly increase hallucination incidence. [web:16][web:2]
+            </p>
           </li>
         </ol>
       </div>
