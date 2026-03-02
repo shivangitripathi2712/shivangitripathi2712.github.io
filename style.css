@@ -44,8 +44,8 @@ body {
   font-family: var(--font-body);
   background: var(--bg);
   color: var(--text);
-  line-height: 1.7;
-  font-size: 16px;
+  line-height: 1.75;
+  font-size: 18px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -75,7 +75,7 @@ img { display: block; max-width: 100%; }
 .container {
   position: relative;
   z-index: 1;
-  width: min(1080px, 90vw);
+  width: min(1100px, 90vw);
   margin: 0 auto;
 }
 
@@ -86,7 +86,7 @@ img { display: block; max-width: 100%; }
 }
 .banner-inner {
   padding: 12px 0;
-  font-size: 13.5px;
+  font-size: 15px;
   color: var(--text-secondary);
   display: flex;
   align-items: center;
@@ -135,12 +135,12 @@ img { display: block; max-width: 100%; }
 .brand:hover { text-decoration: none; }
 .brand-name {
   font-family: var(--font-display);
-  font-size: 18px;
+  font-size: 21px;
   color: var(--text);
   letter-spacing: -0.2px;
 }
 .brand-sub {
-  font-size: 12.5px;
+  font-size: 14px;
   color: var(--muted);
   font-weight: 400;
 }
@@ -151,10 +151,10 @@ img { display: block; max-width: 100%; }
   align-items: center;
 }
 .nav a {
-  font-size: 13.5px;
+  font-size: 15px;
   font-weight: 600;
   color: var(--text-secondary);
-  padding: 6px 10px;
+  padding: 6px 11px;
   border-radius: 8px;
   transition: background 0.15s ease, color 0.15s ease;
 }
@@ -168,7 +168,7 @@ img { display: block; max-width: 100%; }
   border: 1px solid var(--accent-mid);
   color: var(--accent) !important;
   border-radius: 999px !important;
-  padding: 6px 14px !important;
+  padding: 6px 16px !important;
 }
 .nav-cta:hover {
   background: var(--accent-mid) !important;
@@ -215,7 +215,7 @@ img { display: block; max-width: 100%; }
 }
 
 .hero-tag {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.5px;
@@ -225,11 +225,11 @@ img { display: block; max-width: 100%; }
 
 .hero h1 {
   font-family: var(--font-display);
-  font-size: 52px;
+  font-size: 56px;
   font-weight: 400;
   letter-spacing: -1px;
   line-height: 1.1;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   color: var(--text);
 }
 .hero h1 .accent {
@@ -237,22 +237,22 @@ img { display: block; max-width: 100%; }
 }
 
 .hero-lead {
-  font-size: 16.5px;
-  line-height: 1.75;
+  font-size: 18px;
+  line-height: 1.8;
   color: var(--text-secondary);
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
 .quick-facts {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin: 0 0 22px;
+  margin: 0 0 24px;
 }
 .pill {
-  font-size: 12.5px;
+  font-size: 14px;
   font-weight: 600;
-  padding: 6px 12px;
+  padding: 7px 14px;
   border-radius: 999px;
   border: 1px solid var(--border-strong);
   background: var(--panel);
@@ -268,20 +268,20 @@ img { display: block; max-width: 100%; }
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
 .btn {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  padding: 10px 16px;
+  padding: 11px 18px;
   border-radius: 10px;
   border: 1px solid var(--border-strong);
   background: var(--panel);
   color: var(--text);
   font-weight: 700;
-  font-size: 13.5px;
+  font-size: 15px;
   font-family: var(--font-body);
   text-decoration: none;
   transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
@@ -312,8 +312,8 @@ img { display: block; max-width: 100%; }
   border: 1px solid var(--green-mid);
   background: var(--green-soft);
   color: var(--text-secondary);
-  font-size: 14.5px;
-  line-height: 1.6;
+  font-size: 16px;
+  line-height: 1.65;
 }
 .callout svg {
   flex-shrink: 0;
@@ -350,34 +350,34 @@ img { display: block; max-width: 100%; }
   justify-content: space-between;
   align-items: center;
   gap: 12px;
-  padding: 9px 0;
+  padding: 10px 0;
   border-bottom: 1px solid rgba(26, 26, 46, 0.05);
 }
 .meta-row:last-child { border-bottom: none; }
 .k {
   color: var(--muted);
-  font-size: 12.5px;
+  font-size: 13.5px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 .v {
   font-weight: 700;
-  font-size: 13px;
+  font-size: 15px;
   color: var(--text);
 }
 
 /* ── Sections ──────────────────────────────────────────────────────── */
 .section {
-  padding: 48px 0;
+  padding: 50px 0;
 }
 
 .section-head {
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 .section-label {
   display: inline-block;
-  font-size: 11.5px;
+  font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.8px;
@@ -386,15 +386,15 @@ img { display: block; max-width: 100%; }
 }
 .section-head h2 {
   font-family: var(--font-display);
-  font-size: 32px;
+  font-size: 36px;
   font-weight: 400;
   letter-spacing: -0.3px;
   line-height: 1.2;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 .section-head p {
   color: var(--muted);
-  font-size: 15px;
+  font-size: 17px;
 }
 
 /* ── Cards ─────────────────────────────────────────────────────────── */
@@ -402,7 +402,7 @@ img { display: block; max-width: 100%; }
   background: var(--panel);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 22px;
+  padding: 24px;
   box-shadow: var(--shadow-sm);
   transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
@@ -411,8 +411,8 @@ img { display: block; max-width: 100%; }
 }
 
 .card-icon {
-  width: 38px;
-  height: 38px;
+  width: 40px;
+  height: 40px;
   border-radius: 10px;
   background: var(--accent-soft);
   color: var(--accent);
@@ -450,9 +450,9 @@ img { display: block; max-width: 100%; }
   flex-wrap: wrap;
 }
 .tag {
-  font-size: 11.5px;
+  font-size: 13px;
   font-weight: 700;
-  padding: 5px 12px;
+  padding: 5px 13px;
   border-radius: 999px;
   border: 1px solid var(--accent-mid);
   background: var(--accent-soft);
@@ -464,23 +464,23 @@ img { display: block; max-width: 100%; }
 /* ── Typography helpers ────────────────────────────────────────────── */
 h3 {
   font-family: var(--font-body);
-  font-size: 17px;
+  font-size: 19px;
   font-weight: 700;
   margin-bottom: 4px;
   color: var(--text);
 }
 
-.muted { color: var(--muted); font-size: 14px; }
+.muted { color: var(--muted); font-size: 15.5px; }
 
 .bullets {
   margin: 10px 0 0;
   padding-left: 20px;
   color: var(--text-secondary);
-  font-size: 14.5px;
+  font-size: 16px;
 }
 .bullets li {
-  margin: 6px 0;
-  line-height: 1.65;
+  margin: 7px 0;
+  line-height: 1.7;
 }
 .bullets li::marker {
   color: var(--accent);
@@ -494,7 +494,7 @@ h3 {
   list-style: none;
 }
 .pub-list li {
-  margin: 16px 0;
+  margin: 18px 0;
   padding-left: 8px;
   counter-increment: pub;
   position: relative;
@@ -505,18 +505,19 @@ h3 {
   left: -20px;
   font-weight: 700;
   color: var(--accent);
-  font-size: 14px;
+  font-size: 16px;
 }
 .pub-title {
   display: block;
   font-weight: 700;
+  font-size: 17px;
   color: var(--text);
-  line-height: 1.5;
+  line-height: 1.55;
 }
 .pub-venue {
   display: block;
   margin-top: 4px;
-  font-size: 13px;
+  font-size: 15px;
   color: var(--muted);
   font-style: italic;
 }
@@ -529,12 +530,12 @@ h3 {
 }
 .contact p {
   margin-bottom: 14px;
-  font-size: 14.5px;
-  line-height: 1.6;
+  font-size: 16.5px;
+  line-height: 1.65;
 }
 .contact strong {
   display: block;
-  font-size: 12px;
+  font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: var(--muted);
@@ -552,7 +553,7 @@ h3 {
   justify-content: space-between;
   gap: 12px;
   flex-wrap: wrap;
-  font-size: 13.5px;
+  font-size: 15px;
   color: var(--muted);
 }
 
@@ -563,10 +564,10 @@ h3 {
     gap: 28px;
     padding-top: 32px;
   }
-  .hero h1 { font-size: 38px; }
+  .hero h1 { font-size: 40px; }
   .grid-2 { grid-template-columns: 1fr; }
   .contact { grid-template-columns: 1fr; }
-  .section-head h2 { font-size: 26px; }
+  .section-head h2 { font-size: 28px; }
 
   .nav { display: none; }
   .nav.open {
@@ -594,10 +595,11 @@ h3 {
 }
 
 @media (max-width: 500px) {
-  .hero h1 { font-size: 32px; }
-  .banner-inner { font-size: 12.5px; }
+  .hero h1 { font-size: 34px; }
+  .banner-inner { font-size: 13.5px; }
   .container { width: 92vw; }
-  .card { padding: 16px; }
+  .card { padding: 18px; }
+  body { font-size: 16.5px; }
 }
 
 /* ── Selection highlight ───────────────────────────────────────────── */
