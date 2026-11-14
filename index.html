@@ -3,498 +3,205 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Shivangi Tripathi — Trustworthy Multimodal AI · Ph.D. Candidate, Texas State University</title>
-  <meta name="description" content="Shivangi Tripathi is a Ph.D. candidate at Texas State University's Human AI Synergy Lab researching hallucination detection and mitigation in text, vision-language, and audio-language models. NAIRR Pilot awardee." />
+  <title>Shivangi Tripathi — Ph.D. Candidate, Texas State University</title>
+  <meta name="description" content="Shivangi Tripathi is a Ph.D. candidate at Texas State University's Human AI Synergy Lab researching hallucination detection and mitigation in text, vision-language, and audio-language models." />
   <meta property="og:title" content="Shivangi Tripathi — Trustworthy Multimodal AI" />
-  <meta property="og:description" content="Ph.D. candidate researching hallucination detection & mitigation across text, vision, and audio models." />
+  <meta property="og:description" content="Ph.D. candidate researching hallucination detection and mitigation across text, vision, and audio models." />
   <meta property="og:type" content="website" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <div class="progress" id="progress" aria-hidden="true"></div>
+  <div class="layout">
 
-  <header class="topbar" id="topbar">
-    <div class="wrap topbar-in">
-      <a href="#top" class="brand">
-        <span class="brand-name">Shivangi Tripathi</span>
-        <span class="brand-sub">Trustworthy Multimodal AI</span>
-      </a>
+    <!-- ═══ SIDEBAR: who I am + links (stays put on desktop) ═══ -->
+    <aside class="side">
+      <img class="photo" src="87584A18-F825-407B-A9EA-356D758D106C.JPG" alt="Portrait of Shivangi Tripathi" />
+      <h1>Shivangi Tripathi</h1>
+      <p class="role">Ph.D. Candidate, Computer Science<br />Texas State University</p>
+      <p class="lab">Human AI Synergy Lab<br />Advisor: Dr. Heena Rathore</p>
 
-      <nav class="nav" id="nav" aria-label="Primary">
+      <ul class="links">
+        <li><a href="mailto:tjk86@txstate.edu">tjk86@txstate.edu</a></li>
+        <li><a href="https://scholar.google.com/citations?hl=en&user=F0VM8BQAAAAJ" target="_blank" rel="noreferrer">Google Scholar</a></li>
+        <li><a href="https://www.linkedin.com/in/shivangi-tripathi-62581415b/" target="_blank" rel="noreferrer">LinkedIn</a></li>
+        <li class="muted">San Marcos, TX</li>
+      </ul>
+
+      <nav class="toc" aria-label="Sections">
         <a href="#about">About</a>
         <a href="#news">News</a>
-        <a href="#research">Research</a>
         <a href="#publications">Publications</a>
+        <a href="#research">Research</a>
         <a href="#background">Background</a>
-        <a href="#contact" class="cta">Contact</a>
       </nav>
+    </aside>
 
-      <button class="iconbtn burger" id="burger" aria-label="Toggle menu" aria-expanded="false">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-      </button>
-    </div>
-  </header>
+    <!-- ═══ MAIN CONTENT ═══ -->
+    <main>
 
-  <main id="top">
-    <!-- ═══ HERO ═══════════════════════════════════════════════════ -->
-    <section id="about" class="wrap hero">
-      <div data-reveal>
-        <p class="kicker">Ph.D. Candidate · Human AI Synergy Lab · Texas State University</p>
-        <h1>Shivangi Tripathi</h1>
-
-        <!-- Signature: the thesis line flags and corrects itself, the way my research does. -->
-        <p class="thesis" id="thesis">
-          Generative AI should be <span class="halluc" id="halluc">plausible</span><span class="fix"><ins id="fixWord">grounded</ins><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span></span>.
+      <section id="about">
+        <h2>About</h2>
+        <p>
+          I'm a third-year Ph.D. candidate at Texas State University. I study
+          <strong>hallucinations</strong> in generative AI — when models produce confident
+          but wrong output — and build methods to <strong>detect</strong> and
+          <strong>correct</strong> them in <strong>text</strong>,
+          <strong>vision-language</strong>, and <strong>audio-language</strong> models.
         </p>
-
-        <p class="lead">
-          I'm a third-year Ph.D. candidate studying how large models fail — and how to catch it.
-          My research detects, measures, and corrects <strong>hallucinations</strong> in
-          <strong>text</strong>, <strong>vision-language</strong>, and <strong>audio-language</strong>
-          systems: evidence-grounded correction, adversarial stress-testing, and benchmarks that
-          expose silent failure modes before deployment does.
+        <p>
+          My work covers evidence-based correction of LLM text, faithful image captions for
+          safety-critical scenes, adversarial attacks that trigger hallucination, and clinical
+          audio benchmarks. I expect to graduate in 2027.
         </p>
+        <p class="note">Open to research internships and collaborations.</p>
+      </section>
 
-        <div class="actions">
-          <a class="btn primary" href="mailto:tjk86@txstate.edu">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-            Email me
-          </a>
-          <a class="btn" href="https://scholar.google.com/citations?hl=en&user=F0VM8BQAAAAJ" target="_blank" rel="noreferrer">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/></svg>
-            Google Scholar
-          </a>
-          <a class="btn" href="https://www.linkedin.com/in/shivangi-tripathi-62581415b/" target="_blank" rel="noreferrer">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            LinkedIn
-          </a>
-        </div>
-
-        <!-- EDIT HERE: availability -->
-        <span class="avail"><span class="dot"></span><b>Open</b>&nbsp;to research internships &amp; collaborations</span>
-      </div>
-
-      <div data-reveal style="--d:.12s">
-        <div class="pcard">
-          <div class="photo-wrap" id="photoWrap">
-            <!-- Keep this filename, or rename the file and update the src -->
-            <img class="photo" src="87584A18-F825-407B-A9EA-356D758D106C.JPG" alt="Portrait of Shivangi Tripathi"
-                 onerror="document.getElementById('photoWrap').classList.add('fallback')" />
-            <div class="monogram" aria-hidden="true">ST</div>
-          </div>
-          <div class="pmeta">
-            <div class="mrow"><span class="mk">Lab</span><span class="mv">Human AI Synergy Lab</span></div>
-            <div class="mrow"><span class="mk">Advisor</span><span class="mv">Dr. Heena Rathore</span></div>
-            <div class="mrow"><span class="mk">Location</span><span class="mv">San Marcos, TX</span></div>
-            <div class="mrow"><span class="mk">Email</span><span class="mv"><a href="mailto:tjk86@txstate.edu">tjk86@txstate.edu</a></span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ STATS ══════════════════════════════════════════════════ -->
-    <section class="wrap" aria-label="Key numbers" data-reveal>
-      <div class="stats">
-        <div class="stat"><div class="num" data-count="4">0</div><div class="lbl">Peer-reviewed papers</div></div>
-        <div class="stat"><div class="num" data-count="12400">0</div><div class="lbl">GPU hours awarded</div></div>
-        <div class="stat"><div class="num" data-count="3">0</div><div class="lbl">Modalities studied</div></div>
-        <div class="stat"><div class="num" data-count="2027" data-plain>0</div><div class="lbl">Expected Ph.D.</div></div>
-      </div>
-    </section>
-
-    <!-- ═══ NEWS ═══════════════════════════════════════════════════ -->
-    <section id="news" class="wrap section">
-      <div class="shead" data-reveal>
-        <p class="kicker">Recent updates</p>
+      <!-- EDIT HERE: add new news items at the top -->
+      <section id="news">
         <h2>News</h2>
-      </div>
+        <ul class="news">
+          <li class="new">
+            <span class="date">Nov 2026</span>
+            <span><strong>Paper accepted to EACL 2027 (Findings)!</strong>
+              <em>“MS-CAPS: Minimal Sufficient Image Captions for Safety-Critical Traffic Scene Understanding”</em>. See you in Athens!</span>
+          </li>
+          <li>
+            <span class="date">Jun 2026</span>
+            <span>Awarded a <strong>NAIRR Pilot</strong> allocation of 12,400 GPU hours on NCSA Delta for
+              “Trustworthy Vision-Language Models via Minimal Sufficient Captions for Faithful Image Generation”
+              (NAIRR260108, PI: Dr. Heena Rathore).</span>
+          </li>
+          <li>
+            <span class="date">Apr 2026</span>
+            <span>Defended my dissertation proposal and advanced to <strong>Ph.D. candidacy</strong>.</span>
+          </li>
+          <li>
+            <span class="date">Oct 2024</span>
+            <span>Passed the Ph.D. qualifying exam.</span>
+          </li>
+        </ul>
+      </section>
 
-      <!-- EDIT HERE: add new items to the top. Verify the two estimated dates below. -->
-      <div class="newslist">
-        <article class="news latest" data-reveal>
-          <div class="ndate">Jun 2026</div>
-          <div>
-            <h3>Awarded a NAIRR Pilot compute allocation</h3>
-            <p>
-              Our project “Trustworthy Vision-Language Models via Minimal Sufficient Captions for
-              Faithful Image Generation” (2026–2027) received 12,400 GPU hours on NCSA Delta through
-              the National Artificial Intelligence Research Resource Pilot
-              (NAIRR260108, PI: Dr.&nbsp;Heena Rathore).
-            </p>
-          </div>
-        </article>
+      <!-- EDIT HERE: newest paper first -->
+      <section id="publications">
+        <h2>Publications</h2>
+        <p class="sub">Full list on <a href="https://scholar.google.com/citations?hl=en&user=F0VM8BQAAAAJ" target="_blank" rel="noreferrer">Google Scholar</a>.</p>
 
-        <article class="news" data-reveal>
-          <div class="ndate"> April 2026</div>
-          <div>
-            <h3>Advanced to Ph.D. candidacy</h3>
-            <p>Successfully defended my dissertation proposal.</p>
-          </div>
-        </article>
-
-        <article class="news" data-reveal>
-          <div class="ndate">Oct 2024</div>
-          <div>
-            <h3>Passed the Ph.D. qualifying exam</h3>
-            <p>Cleared the qualifiers in the Department of Computer Science at Texas State University.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- ═══ WHAT I WORK ON ═════════════════════════════════════════ -->
-    <section id="research" class="wrap section">
-      <div class="shead" data-reveal>
-        <p class="kicker">Research focus</p>
-        <h2>What I work on</h2>
-        <p>One question across three modalities: when a model generates something, can we trust it — and if not, can we fix it?</p>
-      </div>
-
-      <div class="grid2">
-        <div class="card fcard" data-reveal>
-          <div class="stage v-text" aria-hidden="true">
-            <span class="tl" style="width:72%"></span>
-            <span class="tl fixline" style="width:52%"></span>
-            <span class="tl" style="width:63%"></span>
-            <span class="vtick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span>
-          </div>
-          <h3>Text · detection &amp; correction</h3>
-          <p>Claim decomposition, verification-question generation, and evidence-grounded rewriting that corrects misinformation without breaking narrative coherence.</p>
-        </div>
-
-        <div class="card fcard" data-reveal style="--d:.08s">
-          <div class="stage v-vision" aria-hidden="true">
-            <div class="vframe">
-              <span class="vsun"></span>
-              <span class="vmtn m1"></span>
-              <span class="vmtn m2"></span>
-              <span class="vscan"></span>
-            </div>
-          </div>
-          <h3>Vision-language · faithful captioning</h3>
-          <p>Minimal sufficient captions and rate-distortion views of captioning, so downstream image generation stays faithful to what's actually in the scene.</p>
-        </div>
-
-        <div class="card fcard" data-reveal style="--d:.16s">
-          <div class="stage v-audio" aria-hidden="true">
-            <span class="eq"></span><span class="eq"></span><span class="eq"></span><span class="eq"></span>
-            <span class="eq warn"></span>
-            <span class="eq"></span><span class="eq"></span><span class="eq"></span><span class="eq"></span>
-          </div>
-          <h3>Audio-language · silent error tracing</h3>
-          <p>Benchmarking speech-grounded LLMs and tracing how transcription errors propagate quietly into downstream reasoning — especially where the stakes are clinical.</p>
-        </div>
-
-        <div class="card fcard" data-reveal style="--d:.24s">
-          <div class="stage v-shield" aria-hidden="true">
-            <span class="ring"></span>
-            <span class="ring r2"></span>
-            <span class="vshield"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-3.5 8-10V5l-8-3-8 3v7c0 6.5 8 10 8 10z"/></svg></span>
-          </div>
-          <h3>Adversarial robustness &amp; security</h3>
-          <p>Characterizing prompt-level attacks that induce hallucination, and building evaluations that hold up under distribution shift and adversarial pressure.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ PUBLICATIONS ═══════════════════════════════════════════ -->
-    <section id="publications" class="wrap section">
-      <div class="shead" data-reveal>
-        <p class="kicker">Research output</p>
-        <h2>Selected publications</h2>
-      </div>
-
-      <div class="card" data-reveal>
-        <div class="publist">
-          <article class="pub">
-            <span class="citekey">[CCNC ’26]</span>
+        <ol class="pubs">
+          <li>
+            <span class="venue">EACL 2027</span>
             <div>
-              <h3>Paragraph-Level Hallucination Detection for LLMs in Networked Systems</h3>
-              <p class="venue">Proceedings of IEEE CCNC, 2026</p>
-              <p class="desc">Hallucination detection designed for LLMs deployed in networked and edge environments, with metrics that account for bandwidth, latency, and resource constraints.</p>
+              <p class="title">MS-CAPS: Minimal Sufficient Image Captions for Safety-Critical Traffic Scene Understanding</p>
+              <p class="where">Findings of EACL, 2027 · Athens <span class="tag">New</span></p>
+              <p class="desc">A knowledge-graph-guided method that compresses image captions to the details that matter, tested by how well an image generator can rebuild the scene.</p>
             </div>
-          </article>
-
-          <article class="pub">
-            <span class="citekey">[DISTILL ’25]</span>
+          </li>
+          <li>
+            <span class="venue">CCNC 2026</span>
             <div>
-              <h3>Detecting and Correcting Hallucinations in Paragraph-Level Text with Ensemble-Based Evaluation</h3>
-              <p class="venue">IEEE DISTILL, 2025</p>
-              <p class="desc">An ensemble of classifier, semantic-similarity, NLI, and LLM-judge signals that detects paragraph-level hallucinations and guides targeted revision of long-form outputs.</p>
+              <p class="title">Paragraph-Level Hallucination Detection for LLMs in Networked Systems</p>
+              <p class="where">IEEE CCNC, 2026</p>
+              <p class="desc">Hallucination detection for LLMs running in networked and edge settings, with metrics that account for bandwidth, latency, and resource limits.</p>
             </div>
-          </article>
-
-          <article class="pub">
-            <span class="citekey">[CIOCSE ’25]</span>
+          </li>
+          <li>
+            <span class="venue">DISTILL 2025</span>
             <div>
-              <h3>REVISE: A Framework for Paragraph-Level Misinformation Correction in Large Language Models</h3>
-              <p class="venue">Proceedings of CIOCSE, 2025</p>
-              <p class="desc">Decomposes paragraphs into verifiable claims, retrieves external evidence, and gates targeted LLM rewrites — correcting misinformation while preserving narrative coherence.</p>
+              <p class="title">Detecting and Correcting Hallucinations in Paragraph-Level Text with Ensemble-Based Evaluation</p>
+              <p class="where">IEEE DISTILL, 2025</p>
+              <p class="desc">Combines classifier, semantic-similarity, NLI, and LLM-judge signals to find hallucinated paragraphs and guide their revision.</p>
             </div>
-          </article>
-
-          <article class="pub">
-            <span class="citekey">[MSS ’24]</span>
+          </li>
+          <li>
+            <span class="venue">CIOCSE 2025</span>
             <div>
-              <h3>Assessing Hallucination in LLMs under Adversarial Attacks</h3>
-              <p class="venue">Proceedings of IEEE MobiSecServ, 2024</p>
-              <p class="desc">Quantifies how weak-semantic and out-of-distribution prompt attacks raise hallucination rates in open-source models such as Vicuna-7B and LLaMA-2-7B-chat.</p>
+              <p class="title">REVISE: A Framework for Paragraph-Level Misinformation Correction in Large Language Models</p>
+              <p class="where">CIOCSE, 2025</p>
+              <p class="desc">Splits paragraphs into checkable claims, retrieves evidence, and rewrites only what is wrong — keeping the rest of the text intact.</p>
             </div>
-          </article>
-        </div>
-        <p class="scholar-note">Full list on <a href="https://scholar.google.com/citations?hl=en&user=F0VM8BQAAAAJ" target="_blank" rel="noreferrer">Google Scholar</a>.</p>
-      </div>
-    </section>
+          </li>
+          <li>
+            <span class="venue">MobiSecServ 2024</span>
+            <div>
+              <p class="title">Assessing Hallucination in LLMs under Adversarial Attacks</p>
+              <p class="where">IEEE MobiSecServ, 2024</p>
+              <p class="desc">Measures how weak-semantic and out-of-distribution prompt attacks raise hallucination rates in Vicuna-7B and LLaMA-2-7B-chat.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
 
-    <!-- ═══ RESULTS ════════════════════════════════════════════════ -->
-    <section id="results" class="wrap section">
-      <div class="shead" data-reveal>
-        <p class="kicker">Selected results</p>
-        <h2>Numbers that held up</h2>
-      </div>
-
-      <div class="grid2">
-        <div class="card hcard" data-reveal>
-          <div class="big">76.8%</div>
-          <div class="cap">Correction accuracy</div>
-          <p>Paragraph-level misinformation correction while holding FactCC above 0.97, evaluated across 1,400+ passages.</p>
-        </div>
-        <div class="card hcard" data-reveal style="--d:.08s">
-          <div class="big">92.5%</div>
-          <div class="cap">Peak attack success</div>
-          <p>Weak-semantic prompt attacks reliably induce hallucination in open-source LLMs — the failure modes my detection work targets.</p>
-        </div>
-        <div class="card hcard" data-reveal style="--d:.16s">
-          <div class="big">83%</div>
-          <div class="cap">F1 · Extractive QA</div>
-          <p>LSTM, custom Transformer, and fine-tuned BERT readers on SQuAD and Natural Questions — over 20 points above TF-IDF baselines.</p>
-        </div>
-        <div class="card hcard" data-reveal style="--d:.24s">
-          <div class="big">+30%</div>
-          <div class="cap">BER improvement · 6G</div>
-          <p>Joint uplink/downlink resource allocation under high mobility, with a 25% gain in spectral efficiency.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ BACKGROUND ═════════════════════════════════════════════ -->
-    <section id="background" class="wrap section">
-      <div class="shead" data-reveal>
-        <p class="kicker">Background</p>
-        <h2>Education &amp; experience</h2>
-      </div>
-
-      <div class="card" data-reveal>
-        <div class="bg-item">
-          <div class="bg-when">2023 — Present</div>
-          <div>
-            <h3>Ph.D. in Computer Science · Texas State University</h3>
-            <p class="bg-sub">Doctoral Instructional Assistant · Expected 2027</p>
-            <ul>
-              <li>Design and evaluate hallucination detection and mitigation pipelines end to end.</li>
-              <li>Build reproducible benchmarks in PyTorch and Hugging Face for controlled, fair evaluation.</li>
-              <li>Support teaching in the Department of Computer Science.</li>
-            </ul>
+      <section id="research">
+        <h2>Research</h2>
+        <div class="areas">
+          <div class="area">
+            <h3>Text</h3>
+            <p>Breaking text into claims, checking them against evidence, and fixing only the wrong parts.</p>
+          </div>
+          <div class="area">
+            <h3>Vision-language</h3>
+            <p>Short, faithful image captions so that images generated from them match the real scene.</p>
+          </div>
+          <div class="area">
+            <h3>Audio-language</h3>
+            <p>Benchmarks for speech-based models, tracing how transcription errors silently affect answers in clinical settings.</p>
+          </div>
+          <div class="area">
+            <h3>Adversarial robustness</h3>
+            <p>Prompt attacks that cause hallucination, and evaluations that hold up under attack and data shift.</p>
           </div>
         </div>
 
-        <div class="bg-item">
-          <div class="bg-when">2021 — 2023</div>
-          <div>
-            <h3>M.Tech in Electrical Engineering · IIT Jodhpur</h3>
-            <p class="bg-sub">Research Assistant, Wireless Communications Lab</p>
-            <ul>
-              <li>Joint resource-allocation algorithms for 6G networks under mobility and latency constraints.</li>
-              <li>MIMO configuration and Doppler analysis for mission-critical mobile edge computing.</li>
-            </ul>
-          </div>
-        </div>
+        <h3 class="minor">Selected results</h3>
+        <ul class="results">
+          <li><b>76.8%</b> correction accuracy on paragraph-level misinformation, with FactCC above 0.97 (1,400+ passages).</li>
+          <li><b>92.5%</b> peak success rate of weak-semantic prompt attacks in inducing hallucination.</li>
+          <li><b>83% F1</b> on extractive QA (SQuAD, Natural Questions), 20+ points above TF-IDF baselines.</li>
+          <li><b>+30%</b> BER improvement and 25% spectral-efficiency gain for 6G resource allocation under high mobility.</li>
+        </ul>
+      </section>
 
-        <div class="bg-item">
-          <div class="bg-when">2017 — 2021</div>
-          <div>
-            <h3>B.Tech in Electronics &amp; Communication · GGSIPU, Delhi</h3>
-          </div>
-        </div>
-      </div>
-    </section>
+      <section id="background">
+        <h2>Background</h2>
+        <ul class="bg">
+          <li>
+            <span class="date">2023 – now</span>
+            <div>
+              <p class="title">Ph.D. in Computer Science, Texas State University</p>
+              <p class="where">Doctoral Instructional Assistant · Expected 2027</p>
+            </div>
+          </li>
+          <li>
+            <span class="date">2021 – 2023</span>
+            <div>
+              <p class="title">M.Tech in Electrical Engineering, IIT Jodhpur</p>
+              <p class="where">Research Assistant, Wireless Communications Lab — 6G resource allocation, MIMO and Doppler analysis for mobile edge computing</p>
+            </div>
+          </li>
+          <li>
+            <span class="date">2017 – 2021</span>
+            <div>
+              <p class="title">B.Tech in Electronics &amp; Communication, GGSIPU, Delhi</p>
+            </div>
+          </li>
+        </ul>
 
-    <!-- ═══ BEYOND ═════════════════════════════════════════════════ -->
-    <section id="beyond" class="wrap section beyond">
-      <div class="shead" data-reveal>
-        <p class="kicker">Beyond the lab</p>
-        <h2>Off the cluster</h2>
-      </div>
-      <div class="card" data-reveal>
-        <p>I hike, play badminton, and take dance workshops. Lately I've been learning landscape photography — natural light, open skies, quiet places.</p>
-        <div class="chips">
-          <span class="chip">Hiking</span>
-          <span class="chip">Badminton</span>
-          <span class="chip">Dance workshops</span>
-          <span class="chip">Landscape photography</span>
-        </div>
-      </div>
-    </section>
+        <p class="outside">Outside the lab: hiking, badminton, dance workshops, and landscape photography.</p>
+      </section>
 
-    <!-- ═══ CONTACT ════════════════════════════════════════════════ -->
-    <section id="contact" class="wrap contact" data-reveal>
-      <h2>Let's build AI worth <em>trusting</em>.</h2>
-      <p>Research collaborations, internship conversations, or questions about a paper — my inbox is open.</p>
-      <div class="actions">
-        <a class="btn primary" href="mailto:tjk86@txstate.edu">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-          tjk86@txstate.edu
-        </a>
-      </div>
-      <p class="alt">or find me on <a href="https://www.linkedin.com/in/shivangi-tripathi-62581415b/" target="_blank" rel="noreferrer">LinkedIn</a> and <a href="https://scholar.google.com/citations?hl=en&user=F0VM8BQAAAAJ" target="_blank" rel="noreferrer">Google Scholar</a></p>
-      <p class="fineprint">San Marcos, Texas</p>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="wrap footer-in">
-      <span>© <span id="year"></span> Shivangi Tripathi</span>
-      <span class="mono">Texas State University · Updated <span id="updated"></span></span>
-    </div>
-  </footer>
-
-  <button class="totop" id="totop" aria-label="Back to top">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5m-7 7 7-7 7 7"/></svg>
-  </button>
+      <footer>
+        © <span id="year"></span> Shivangi Tripathi · Last updated Nov 2026
+      </footer>
+    </main>
+  </div>
 
   <script>
-  (function () {
-    'use strict';
-    var reduced = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    /* year + last-updated — both fully automatic */
     document.getElementById('year').textContent = new Date().getFullYear();
-    var lu = document.getElementById('updated');
-    try {
-      var d = new Date(document.lastModified);
-      lu.textContent = d.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
-    } catch (e) { lu.textContent = ''; }
-
-    /* mobile menu */
-    var nav = document.getElementById('nav');
-    var burger = document.getElementById('burger');
-    burger.addEventListener('click', function () {
-      var open = nav.classList.toggle('open');
-      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-    nav.addEventListener('click', function (e) {
-      if (e.target.tagName === 'A') { nav.classList.remove('open'); burger.setAttribute('aria-expanded', 'false'); }
-    });
-
-    /* scroll: progress bar, topbar border, back-to-top */
-    var bar = document.getElementById('progress');
-    var topbar = document.getElementById('topbar');
-    var totop = document.getElementById('totop');
-    function onScroll() {
-      var h = document.documentElement;
-      var max = h.scrollHeight - h.clientHeight;
-      bar.style.transform = 'scaleX(' + (max > 0 ? h.scrollTop / max : 0) + ')';
-      topbar.classList.toggle('scrolled', h.scrollTop > 8);
-      totop.classList.toggle('show', h.scrollTop > 640);
-    }
-    addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
-    totop.addEventListener('click', function () {
-      window.scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' });
-    });
-
-    /* reveal on scroll */
-    var revealEls = document.querySelectorAll('[data-reveal]');
-    if ('IntersectionObserver' in window && !reduced) {
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (en) {
-          if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
-        });
-      }, { threshold: 0.12 });
-      revealEls.forEach(function (el) { io.observe(el); });
-    } else {
-      revealEls.forEach(function (el) { el.classList.add('in'); });
-    }
-
-    /* animated counters */
-    function runCount(el) {
-      var target = parseFloat(el.getAttribute('data-count'));
-      var suffix = el.getAttribute('data-suffix') || '';
-      var plain = el.hasAttribute('data-plain'); /* no thousands separator (years) */
-      function fmt(n) {
-        var v = Math.round(n);
-        return (plain ? String(v) : v.toLocaleString('en-US')) + suffix;
-      }
-      if (reduced) { el.textContent = fmt(target); return; }
-      var dur = 1500, t0 = null;
-      function step(t) {
-        if (!t0) t0 = t;
-        var p = Math.min((t - t0) / dur, 1);
-        el.textContent = fmt(target * (1 - Math.pow(1 - p, 3)));
-        if (p < 1) requestAnimationFrame(step);
-      }
-      requestAnimationFrame(step);
-    }
-    var nums = document.querySelectorAll('[data-count]');
-    if ('IntersectionObserver' in window) {
-      var cio = new IntersectionObserver(function (entries) {
-        entries.forEach(function (en) {
-          if (en.isIntersecting) { runCount(en.target); cio.unobserve(en.target); }
-        });
-      }, { threshold: 0.5 });
-      nums.forEach(function (el) { cio.observe(el); });
-    } else {
-      nums.forEach(runCount);
-    }
-
-    /* scrollspy nav */
-    var sections = document.querySelectorAll('main section[id]');
-    var links = document.querySelectorAll('.nav a[href^="#"]');
-    if ('IntersectionObserver' in window) {
-      var spy = new IntersectionObserver(function (entries) {
-        entries.forEach(function (en) {
-          if (!en.isIntersecting) return;
-          var id = '#' + en.target.id;
-          links.forEach(function (l) { l.classList.toggle('active', l.getAttribute('href') === id); });
-        });
-      }, { rootMargin: '-42% 0px -52% 0px' });
-      sections.forEach(function (s) { spy.observe(s); });
-    }
-
-    /* signature: the self-correcting thesis line
-       (flag → strike → correct, cycling through pairs) */
-    var PAIRS = [
-      ['plausible', 'grounded'],
-      ['confident', 'correct'],
-      ['fluent', 'faithful']
-    ];
-    var thesis = document.getElementById('thesis');
-    var badEl = document.getElementById('halluc');
-    var goodEl = document.getElementById('fixWord');
-
-    if (reduced) {
-      badEl.textContent = PAIRS[0][0];
-      goodEl.textContent = PAIRS[0][1];
-      thesis.classList.add('fixed');
-    } else {
-      var idx = 0;
-      function cycle() {
-        var pair = PAIRS[idx];
-        thesis.classList.remove('flag', 'fixed');
-        badEl.textContent = pair[0];
-        goodEl.textContent = pair[1];
-        setTimeout(function () { thesis.classList.add('flag'); }, 1050);          /* detector flags it */
-        setTimeout(function () { thesis.classList.add('fixed'); }, 1900);         /* strike + correction */
-        setTimeout(function () { idx = (idx + 1) % PAIRS.length; cycle(); }, 5400);
-      }
-      cycle();
-    }
-  })();
   </script>
 </body>
 </html>
