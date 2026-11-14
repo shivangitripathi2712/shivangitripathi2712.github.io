@@ -18,8 +18,6 @@
   title: "MS-CAPS: Minimal Sufficient Image Captions for Safety-Critical Traffic Scene Understanding"
   authors: ["Shivangi Tripathi"]      # TODO: add co-authors
   venue: "Findings of the Association for Computational Linguistics (EACL)"
-  note: Athens, Greece
-  new: true
   summary: >-
     Shows how to shorten an image caption to only the details that matter for
     driving safety, and checks the result by asking an image generator to

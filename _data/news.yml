@@ -4,76 +4,63 @@
 # The site sorts items by date automatically (newest first).
 #
 #   date:  year-month, e.g. 2026-11   (only the month is shown)
-#   type:  paper | teaching | milestone | award
 #   text:  one or two plain sentences. **bold** and *italic* work.
 #   link:  (optional) a URL shown as "Read more"
 # ─────────────────────────────────────────────────────────────
 
 - date: 2026-11
-  type: paper
   text: >-
-    Our paper **"MS-CAPS: Minimal Sufficient Image Captions for Safety-Critical
-    Traffic Scene Understanding"** was accepted to **Findings of EACL 2027**.
-    See you in Athens!
+    Paper accepted to **Findings of EACL 2027**: "MS-CAPS: Minimal Sufficient
+    Image Captions for Safety-Critical Traffic Scene Understanding."
 
 - date: 2026-10
-  type: teaching
   text: >-
-    Taught two classes at Texas State University: one in **Computer System
-    Security (CS 4371)**, and one in **Cryptography** on security attacks
-    against large language models.
+    Taught two classes at Texas State University: **Computer System Security
+    (CS 4371)**, and **Cryptography**, where I covered security attacks on
+    large language models.
 
 - date: 2026-06
-  type: award
   text: >-
-    Received a **NAIRR Pilot** award of **12,400 GPU hours** on NCSA Delta for
-    the project "Trustworthy Vision-Language Models via Minimal Sufficient
+    Received a **NAIRR Pilot** compute award (12,400 GPU hours on NCSA Delta)
+    for the project "Trustworthy Vision-Language Models via Minimal Sufficient
     Captions for Faithful Image Generation" (PI: Dr. Heena Rathore).
 
 - date: 2026-04
-  type: milestone
   text: >-
     Defended my **dissertation proposal** and advanced to **Ph.D. candidacy**.
 
 - date: 2026-03
-  type: teaching
   text: >-
-    Taught a class in **Computer System Security (CS 4371)** on how to detect
-    and reduce hallucinations in large language models.
+    Taught a class in **Computer System Security (CS 4371)** on methods to
+    detect and reduce hallucinations in large language models.
 
 - date: 2025-09
-  type: paper
   text: >-
     Paper accepted to **IEEE CCNC 2026**: "Paragraph-Level Hallucination
     Detection for LLMs in Networked Systems."
 
 - date: 2025-09
-  type: paper
   text: >-
     Paper accepted to the **IEEE DISTILL 2025** workshop: "Detecting and
     Correcting Hallucinations in Paragraph-Level Text with Ensemble-Based
     Evaluation."
 
 - date: 2025-09
-  type: teaching
   text: >-
     Taught a class in **Computer System Security (CS 4371)** at Texas State
     University.
 
 - date: 2025-05
-  type: paper
   text: >-
     Paper accepted to **IEEE AITest 2025**: "REVISE: A Framework for
     Paragraph-Level Misinformation Correction in Large Language Models."
 
 - date: 2024-10
-  type: milestone
   text: >-
     Passed the **Ph.D. qualifying exam** in Computer Science at Texas State
     University.
 
 - date: 2024-07
-  type: paper
   text: >-
     Paper accepted to **IEEE MobiSecServ 2024**: "Assessing Hallucination in
     Large Language Models Under Adversarial Attacks."
