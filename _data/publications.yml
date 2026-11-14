@@ -14,7 +14,7 @@
   year: 2027
   badge: EACL 2027
   title: "MS-CAPS: Minimal Sufficient Image Captions for Safety-Critical Traffic Scene Understanding"
-  authors: ["Shivangi Tripathi"]      # TODO: add co-authors
+  authors: ["Shivangi Tripathi", "Heena Rathore"]
   venue: "Findings of the Association for Computational Linguistics (EACL)"
   summary: >-
     Shows how to shorten an image caption to only the details that matter for
