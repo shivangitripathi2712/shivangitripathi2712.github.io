@@ -19,7 +19,7 @@ author:
   github: https://github.com/shivangitripathi2712
   photo: /assets/img/profile.jpg
   # Put your CV PDF at assets/cv.pdf and set this to /assets/cv.pdf
-  cv_pdf: ""
+  cv_pdf: /assets/Shivangi_Tripathi_CV.pdf
 
 markdown: kramdown
 exclude: [README.md, Preview]
