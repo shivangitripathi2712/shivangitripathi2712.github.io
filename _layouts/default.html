@@ -1,0 +1,36 @@
+{%- assign a = site.author -%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ a.name }}</title>
+  <meta name="description" content="{{ site.description | strip }}" />
+  <meta property="og:title" content="{{ a.name }}" />
+  <meta property="og:description" content="{{ site.description | strip }}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-in">
+      <a class="site-name" href="/">{{ a.name }}</a>
+      <nav>
+        <a href="/" {% if page.url == "/" %}class="current"{% endif %}>About</a>
+        <a href="/publications/" {% if page.url == "/publications/" %}class="current"{% endif %}>Publications</a>
+        <a href="/research/" {% if page.url == "/research/" %}class="current"{% endif %}>Research</a>
+        <a href="/teaching/" {% if page.url == "/teaching/" %}class="current"{% endif %}>Teaching</a>
+        <a href="/cv/" {% if page.url == "/cv/" %}class="current"{% endif %}>CV</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+{{ content }}
+  </main>
+
+  <footer class="footer">© {{ site.time | date: "%Y" }} {{ a.name }} · Last updated {{ site.time | date: "%B %Y" }}</footer>
+</body>
+</html>

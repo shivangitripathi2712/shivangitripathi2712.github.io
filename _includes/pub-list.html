@@ -1,0 +1,17 @@
+<ol class="pubs">
+  {%- for p in pubs_to_show %}
+  <li>
+    <span class="venue-tag">{{ p.badge }}</span>
+    <div>
+      <span class="pub-title">{% if p.pdf and p.pdf != "" %}<a href="{{ p.pdf }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</span><br />
+      {% for name in p.authors -%}
+        {%- if name == site.author.name %}<b>{{ name }}</b>{% else %}{{ name }}{% endif %}{% unless forloop.last %}, {% endunless -%}
+      {%- endfor %}<br />
+      <i>{{ p.venue }}</i>, {{ p.year }}
+      {%- if p.pdf and p.pdf != "" %} · <a href="{{ p.pdf }}">PDF</a>{% endif %}
+      {%- if p.code and p.code != "" %} · <a href="{{ p.code }}">Code</a>{% endif %}
+      {%- if p.slides and p.slides != "" %} · <a href="{{ p.slides }}">Slides</a>{% endif %}
+    </div>
+  </li>
+  {%- endfor %}
+</ol>

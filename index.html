@@ -1,146 +1,54 @@
 ---
-# Built automatically from _config.yml and the files in _data/.
+layout: default
 ---
 {%- assign a = site.author -%}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>{{ a.name }}</title>
-  <meta name="description" content="{{ site.description | strip }}" />
-  <meta property="og:title" content="{{ a.name }}" />
-  <meta property="og:description" content="{{ site.description | strip }}" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/assets/css/style.css" />
-</head>
-<body>
-<div class="page">
-
-  <header class="header">
-    <img class="photo" src="{{ a.photo }}" alt="{{ a.name }}" />
-    <div>
-      <h1>{{ a.name }}</h1>
-      <p>{{ a.role }}<br />{{ a.lab }}, {{ a.school }}</p>
-      <p class="contact">
-        <a href="mailto:{{ a.email }}">{{ a.email }}</a><br />
-        <a href="{{ a.scholar }}">Google Scholar</a> ·
-        <a href="{{ a.linkedin }}">LinkedIn</a> ·
-        <a href="{{ a.github }}">GitHub</a>
-      </p>
-    </div>
-  </header>
-
-  <nav class="nav">
-    <a href="#about">About</a>
-    <a href="#news">News</a>
-    <a href="#publications">Publications</a>
-    <a href="#research">Research</a>
-    <a href="#experience">Experience</a>
-    <a href="#teaching">Teaching</a>
-    <a href="#education">Education</a>
-    <a href="#hobbies">Hobbies</a>
-  </nav>
-
-  <section id="about">
-    <h2>About</h2>
+<section class="intro">
+  <div class="intro-text">
+    <h1>{{ a.name }}</h1>
+    <p class="role">{{ a.role }}, {{ a.school }}</p>
     <p>
       I am a Ph.D. candidate in Computer Science at {{ a.school }}, where I work in the
       {{ a.lab }} with {{ a.advisor }}.
     </p>
     <p>
       My research is on hallucinations in generative AI: cases where a model produces output that
-      sounds correct but is false or not supported by its input. I study this problem in three
-      settings: language models that generate text, vision-language models that describe images,
-      and audio-language models that process speech. I develop methods to detect and correct these
-      errors, and I test how models fail under adversarial prompts. My applications include
-      transportation safety and health care.
+      sounds correct but is false or not supported by its input. I study this problem in language
+      models that generate text, vision-language models that describe images, and audio-language
+      models that process speech. I develop methods to detect and correct these errors, and I test
+      how models fail under adversarial prompts, with applications in transportation safety and
+      health care.
     </p>
     <p>
       I will graduate in 2027 and am looking for full-time positions starting after graduation.
     </p>
-  </section>
-
-  {%- assign news = site.data.news | sort: "date" | reverse %}
-  <section id="news">
-    <h2>News</h2>
-    <ul class="news">
-      {%- for n in news %}
-      {%- assign d = n.date | append: "-01" %}
-      <li><span class="date">{{ d | date: "%b %Y" }}</span><span>{{ n.text | markdownify | remove: "<p>" | remove: "</p>" | strip }}{% if n.link %} <a href="{{ n.link }}">[link]</a>{% endif %}</span></li>
-      {%- endfor %}
-    </ul>
-  </section>
-
-  {%- assign pubs = site.data.publications | sort: "year" | reverse %}
-  <section id="publications">
-    <h2>Publications</h2>
-    <ol class="pubs" reversed>
-      {%- for p in pubs %}
-      <li>
-        <span class="title">{{ p.title }}</span><br />
-        {% for name in p.authors -%}
-          {%- if name == a.name %}<b>{{ name }}</b>{% else %}{{ name }}{% endif %}{% unless forloop.last %}, {% endunless -%}
-        {%- endfor %}<br />
-        <i>{{ p.venue }}</i>, {{ p.year }}.
-        {%- if p.pdf and p.pdf != "" %} <a href="{{ p.pdf }}">[PDF]</a>{% endif %}
-        {%- if p.code and p.code != "" %} <a href="{{ p.code }}">[Code]</a>{% endif %}
-        {%- if p.slides and p.slides != "" %} <a href="{{ p.slides }}">[Slides]</a>{% endif %}
-      </li>
-      {%- endfor %}
-    </ol>
-    <p class="note">See also <a href="{{ a.scholar }}">Google Scholar</a>.</p>
-  </section>
-
-  <section id="research">
-    <h2>Research</h2>
-    {%- for r in site.data.research %}
-    <h3>{{ r.title }}</h3>
-    <p>{{ r.text }}{% if r.papers.size > 0 %} <span class="refs">[{{ r.papers | join: ", " }}]</span>{% endif %}</p>
-    {%- endfor %}
-  </section>
-
-  <section id="experience">
-    <h2>Experience</h2>
-    <ul class="news">
-      {%- for x in site.data.experience %}
-      <li><span class="date">{{ x.dates }}</span><span><b>{{ x.role }}</b>, {{ x.place }}
-        <ul class="details">{% for d in x.details %}<li>{{ d }}</li>{% endfor %}</ul></span></li>
-      {%- endfor %}
-    </ul>
-  </section>
-
-  <section id="teaching">
-    <h2>Teaching</h2>
-    <ul class="news">
-      {%- for t in site.data.teaching %}
-      <li><span class="date">{{ t.term }}</span><span><b>{{ t.course }}</b>. {{ t.note }}.</span></li>
-      {%- endfor %}
-    </ul>
-  </section>
-
-  <section id="education">
-    <h2>Education</h2>
-    <ul class="news">
-      {%- for e in site.data.education %}
-      <li><span class="date">{{ e.years }}</span><span><b>{{ e.degree }}</b>, {{ e.school }}{% if e.note %}<br /><span class="muted">{{ e.note }}</span>{% endif %}</span></li>
-      {%- endfor %}
-    </ul>
-  </section>
-
-  <section id="hobbies">
-    <h2>Hobbies</h2>
     <p>
       Outside of work, I go to the gym regularly and enjoy lifting weights. I also enjoy
-      semi-classical Indian dance, especially Bharatanatyam. Now and then I go hiking, and I
-      like playing badminton.
+      semi-classical Indian dance, especially Bharatanatyam, and I like hiking and playing badminton.
     </p>
-  </section>
+    <p class="links">
+      <a href="mailto:{{ a.email }}">Email</a> /
+      <a href="/cv/">CV</a> /
+      <a href="{{ a.scholar }}">Google Scholar</a> /
+      <a href="{{ a.linkedin }}">LinkedIn</a> /
+      <a href="{{ a.github }}">GitHub</a>
+    </p>
+  </div>
+  <img class="photo" src="{{ a.photo }}" alt="{{ a.name }}" />
+</section>
 
-  <footer>Last updated {{ site.time | date: "%B %Y" }}.</footer>
-</div>
+<section>
+  <h2>News</h2>
+  {%- assign all_news = site.data.news | sort: "date" | reverse %}
+  {%- assign news_to_show = all_news | slice: 0, 6 %}
+  {% include news-list.html %}
+  {%- if all_news.size > 6 %}
+  <p class="more"><a href="/news/">All news →</a></p>
+  {%- endif %}
+</section>
 
-</body>
-</html>
+<section>
+  <h2>Selected Publications</h2>
+  {%- assign pubs_to_show = site.data.publications | sort: "year" | reverse | slice: 0, 3 %}
+  {% include pub-list.html %}
+  <p class="more"><a href="/publications/">All publications →</a></p>
+</section>

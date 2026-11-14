@@ -1,0 +1,14 @@
+---
+layout: default
+title: Publications
+permalink: /publications/
+---
+<h1 class="page-title">Publications</h1>
+<p class="lead">Peer-reviewed conference and workshop papers. See also <a href="{{ site.author.scholar }}">Google Scholar</a>.</p>
+{%- assign pubs_sorted = site.data.publications | sort: "year" | reverse %}
+{%- assign years = pubs_sorted | map: "year" | uniq %}
+{%- for y in years %}
+<h2 class="year">{{ y }}</h2>
+{%- assign pubs_to_show = pubs_sorted | where: "year", y %}
+{% include pub-list.html %}
+{%- endfor %}

@@ -1,0 +1,6 @@
+<table class="news">
+  {%- for n in news_to_show %}
+  {%- assign d = n.date | append: "-01" %}
+  <tr><th>{{ d | date: "%b %Y" }}</th><td>{{ n.text | markdownify | remove: "<p>" | remove: "</p>" | strip }}{% if n.link %} <a href="{{ n.link }}">[link]</a>{% endif %}</td></tr>
+  {%- endfor %}
+</table>

@@ -18,6 +18,8 @@ author:
   linkedin: https://www.linkedin.com/in/shivangi-tripathi-62581415b/
   github: https://github.com/shivangitripathi2712
   photo: /assets/img/profile.jpg
+  # Put your CV PDF at assets/cv.pdf and set this to /assets/cv.pdf
+  cv_pdf: ""
 
 markdown: kramdown
 exclude: [README.md, Preview]

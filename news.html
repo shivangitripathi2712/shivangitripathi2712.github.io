@@ -1,0 +1,8 @@
+---
+layout: default
+title: News
+permalink: /news/
+---
+<h1 class="page-title">News</h1>
+{%- assign news_to_show = site.data.news | sort: "date" | reverse %}
+{% include news-list.html %}
