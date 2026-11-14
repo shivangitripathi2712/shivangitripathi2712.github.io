@@ -23,9 +23,18 @@ permalink: /cv/
   {%- endfor %}
 </table>
 
-<h2>Honors and Awards</h2>
+<h2>Technical Skills</h2>
 <table class="news">
-  <tr><th>Jun 2026</th><td><b>NAIRR Pilot compute award</b>: 12,400 GPU hours on NCSA Delta (PI: Dr. Heena Rathore)</td></tr>
+  {%- for k in site.data.skills %}
+  <tr><th>{{ k.area }}</th><td>{{ k.items }}</td></tr>
+  {%- endfor %}
+</table>
+
+<h2>Awards and Training</h2>
+<table class="news">
+  {%- for w in site.data.awards %}
+  <tr><th>{{ w.date }}</th><td><b>{{ w.title }}</b><br />{{ w.note }}</td></tr>
+  {%- endfor %}
 </table>
 
 <h2>Publications</h2>

@@ -1,40 +1,64 @@
 # ─────────────────────────────────────────────────────────────
 # RESEARCH
 #   title:  project name
+#   dates:  time period
 #   text:   2–3 plain sentences
+#   results: optional list of key numbers
 #   papers: venue labels from publications.yml (optional)
 # ─────────────────────────────────────────────────────────────
 
-- title: Correcting hallucinations in generated text
-  text: >-
-    Language models often write paragraphs that mix correct and incorrect
-    statements. I developed REVISE, which splits a paragraph into individual
-    claims, checks each claim against retrieved evidence, and rewrites only
-    the claims that are not supported. I also study how to detect these errors
-    with an ensemble of checkers and in settings with limited computing
-    resources.
-  papers: [AITest 2025, DISTILL 2025, CCNC 2026]
-
-- title: Faithful image captions for safety-critical scenes
+- title: Faithful image captions for safety-critical traffic scenes (MS-CAPS)
+  dates: 2025 – present
   text: >-
     When a vision-language model shortens a caption, it can drop details that
-    matter for safety, such as a pedestrian or a traffic signal. MS-CAPS uses
-    a knowledge graph to compress captions of traffic scenes, and evaluates
-    each caption by how well an image generator can reconstruct the original
-    scene from it.
+    matter for safety, such as a pedestrian or a traffic signal. MS-CAPS uses a
+    knowledge graph to shorten traffic-scene captions to a minimal sufficient
+    form, and checks each caption by asking an image generator (FLUX.1-dev) to
+    rebuild the scene from it.
+  results:
+    - Evaluated on 150 real-world scenes from Vehicle-centric, CoDA-LM, and NuInteract with Qwen2.5-VL, GPT-4o, and Gemini.
+    - Up to 98% of outputs accepted (49 of 50 scenes) with 62.5% average caption reduction.
   papers: [EACL 2027]
 
 - title: Hallucinations in clinical speech
+  dates: 2025 – present
   text: >-
-    Audio-language models are used to write clinical notes from
-    doctor–patient conversations. I study how errors in listening, such as a
-    misheard drug name, turn into false statements in the final note, and I am
-    building a benchmark to measure these errors against the original audio.
+    AI systems that write clinical notes from doctor–patient conversations can
+    turn a listening mistake, such as a misheard drug name, into a false
+    statement in the note. I compare speech-to-text-then-LLM systems with
+    models that listen to audio directly, and trace where each error starts.
+  results:
+    - Evaluation pipeline on 57 doctor–patient consultations (PriMock57).
+    - Pilot runs showed about 75% hallucination and 80% topic-mismatch rates, motivating stage-by-stage error tracing.
   papers: []
 
-- title: Adversarial testing of language models
+- title: Correcting hallucinations in generated text (REVISE)
+  dates: 2024 – present
   text: >-
-    I measure how small changes to a prompt increase the rate of
-    hallucination in open language models, so that detection and correction
-    methods can be tested under realistic pressure.
+    Language models often write paragraphs that mix correct and incorrect
+    statements. REVISE splits a paragraph into individual claims, checks each
+    claim against retrieved evidence, and rewrites only the claims that are not
+    supported, keeping the rest of the paragraph the same.
+  results:
+    - Evaluated on 1,400+ passages from Natural Questions and SQuAD.
+    - Up to 76.8% factual accuracy on the NQ-Mis benchmark.
+  papers: [AITest 2025, DISTILL 2025, CCNC 2026]
+
+- title: Adversarial testing of language models
+  dates: 2024
+  text: >-
+    I measure how small changes to a prompt increase hallucination in open
+    language models, so that detection and correction methods can be tested
+    under realistic pressure.
+  results:
+    - Attacks on Vicuna-7B and LLaMA-2-7B-chat succeeded up to 92.53% of the time.
   papers: [MobiSecServ 2024]
+
+- title: Multimodal AI for aerial disaster assessment
+  dates: Ongoing
+  text: >-
+    I am building a pipeline that turns aerial images of disaster areas into
+    structured information for rapid damage assessment, and that stays reliable
+    when viewpoint, object size, and lighting change.
+  results: []
+  papers: []

@@ -1,18 +1,17 @@
 # ─────────────────────────────────────────────────────────────
 # EXPERIENCE  (newest first)
-#   dates, role, place, details (list of short sentences)
 # ─────────────────────────────────────────────────────────────
 
-- dates: Aug 2023 – May 2027 (expected)
-  role: Doctoral Instructional Assistant
-  place: Department of Computer Science, Texas State University
+- dates: Aug 2023 – present
+  role: Doctoral Researcher and Instructional Assistant
+  place: Human AI Synergy Lab, Texas State University
   details:
-    - Conduct Ph.D. research on detecting and correcting hallucinations in text, vision-language, and audio-language models.
-    - Support teaching in the Department of Computer Science.
+    - Lead research on reliable multimodal AI across vision, language, and audio, covering grounding, hallucination detection and correction, robustness, and evaluation.
+    - Design and run reproducible Python, PyTorch, and Hugging Face experiments, data pipelines, and benchmarks on multi-GPU servers and the NCSA Delta supercomputer.
+    - Published five first-author papers and gave guest lectures on LLM security and hallucination.
 
 - dates: Aug 2022 – May 2023
   role: Research Assistant
   place: Wireless Communications Lab, IIT Jodhpur
   details:
-    - Developed joint resource-allocation methods for 6G networks under high mobility and strict delay limits.
-    - Analyzed MIMO configurations and Doppler effects for mission-critical mobile edge computing.
+    - Built MATLAB/Simulink simulation and analysis pipelines for mission-critical mobile edge computing and high-mobility 6G wireless systems, studying trade-offs between latency, reliability, and resource allocation.

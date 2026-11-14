@@ -1,0 +1,11 @@
+# ─────────────────────────────────────────────────────────────
+# AWARDS AND TRAINING  (newest first)
+# ─────────────────────────────────────────────────────────────
+
+- date: 2026 – 2027
+  title: NAIRR Pilot compute allocation
+  note: "12,400 GPU hours on NCSA Delta for research on trustworthy vision-language models (PI: Dr. Heena Rathore)"
+
+- date: 2025
+  title: NVIDIA Deep Learning Institute, Building AI Agents with Multimodal Models
+  note: Built contrastive RGB/LiDAR representation learning, cross-modal projectors, and multimodal fusion in PyTorch
