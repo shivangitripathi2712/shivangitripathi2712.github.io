@@ -1,0 +1,12 @@
+<svg viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <rect x="28" y="62" width="100" height="56" rx="10" class="t-card"/>
+  <rect x="42" y="78" width="60" height="7" rx="3.5" class="t-line"/>
+  <rect x="42" y="94" width="36" height="7" rx="3.5" class="t-bad"/>
+  <text x="78" y="138" class="t-lab" text-anchor="middle">attacked prompt</text>
+  <path d="M138 90 h30" class="t-arrow"/><path d="M162 84 l8 6 -8 6" class="t-arrow"/>
+  <circle cx="218" cy="90" r="34" class="t-card"/>
+  <path d="M218 68 l18 7 v14 c0 12-8 20-18 24 c-10-4-18-12-18-24 v-14z" class="t-shield"/>
+  <text x="218" y="146" class="t-lab" text-anchor="middle">model</text>
+  <path d="M258 90 h20" class="t-arrow"/><path d="M272 84 l8 6 -8 6" class="t-arrow"/>
+  <text x="298" y="96" class="t-q" text-anchor="middle">?!</text>
+</svg>

@@ -1,0 +1,96 @@
+# ─────────────────────────────────────────────────────────────
+# RESEARCH PROJECTS (cards + pop-up details)
+#   thumb:    which picture to use (text | vision | audio | attack)
+#   title:    plain-English project title
+#   tag:      short label (modality)
+#   takeaway: 2 sentences shown on the card
+#   problem / approach / findings: shown in the pop-up
+#   papers:   list of badge labels from publications.yml
+#   status:   "Published" or "Ongoing"
+# ─────────────────────────────────────────────────────────────
+
+- id: revise
+  thumb: text
+  tag: Text
+  title: Fixing false facts in AI-written text
+  status: Published
+  takeaway: >-
+    AI-written paragraphs often mix true and false statements. REVISE checks
+    each statement against real evidence and rewrites only the false ones.
+  problem: >-
+    A language model can write a fluent paragraph where most sentences are
+    right but one or two are wrong. Rewriting the whole paragraph can break
+    what was already correct, and leaving it as is spreads misinformation.
+  approach:
+    - Split the paragraph into small, checkable claims.
+    - Turn each claim into a question and search for outside evidence.
+    - Decide claim by claim whether the evidence supports it.
+    - Rewrite only the unsupported claims, and keep the rest of the paragraph the same.
+  findings:
+    - Reached 76.8% correction accuracy on more than 1,400 paragraphs.
+    - Kept the corrected text faithful to the evidence (FactCC score above 0.97).
+    - Extended to detection with an ensemble of four checkers (DISTILL 2025) and to networked and edge settings (CCNC 2026).
+  papers: ["AITest 2025", "DISTILL 2025", "CCNC 2026"]
+
+- id: mscaps
+  thumb: vision
+  tag: Vision-language
+  title: Short image captions that keep what matters
+  status: Published
+  takeaway: >-
+    Long captions waste space, and short ones can drop details that matter for
+    safety. MS-CAPS finds the shortest caption that still lets an image
+    generator rebuild the traffic scene correctly.
+  problem: >-
+    Vision-language models describe traffic scenes in long captions. When the
+    caption is cut down, important details such as a pedestrian or a red light
+    can disappear, and nothing downstream warns you.
+  approach:
+    - Build a knowledge graph of the objects and relations in the scene.
+    - Use it to guide a two-stage compression of the caption.
+    - Test each caption by giving it to an image generator (FLUX.1-dev) and comparing the rebuilt image with the original.
+  findings:
+    - Evaluated with Qwen2.5-VL, GPT-4o, and Gemini 2.5 Pro on three traffic datasets.
+    - Accepted to Findings of EACL 2027.
+    - Supported by a NAIRR Pilot award of 12,400 GPU hours.
+  papers: ["EACL 2027"]
+
+- id: cahb
+  thumb: audio
+  tag: Audio-language
+  title: When speech AI mishears, the medical note goes wrong
+  status: Ongoing
+  takeaway: >-
+    AI scribes turn doctor–patient conversations into clinical notes. I study
+    how a small listening mistake becomes a confident error in the final note.
+  problem: >-
+    If a speech model mishears a drug name, the language model that writes the
+    note may "fix" it into a different, real drug. The note looks clean, so
+    checkers that only read the transcript cannot see the error.
+  approach:
+    - Compare two kinds of systems — speech-to-text followed by an LLM, and models that listen to the audio directly.
+    - Label invented and missing information in the generated notes.
+    - Check the notes against the original audio, not just the transcript.
+  findings:
+    - Building a benchmark for hallucination in clinical audio, with human evaluation.
+  papers: []
+
+- id: attacks
+  thumb: attack
+  tag: Robustness
+  title: Prompts that push models to make things up
+  status: Published
+  takeaway: >-
+    Small, harmless-looking changes to a prompt can make a model invent facts.
+    I measure how often this happens so that detection methods can be tested
+    under pressure.
+  problem: >-
+    Hallucination rates are usually measured on clean, friendly prompts. Real
+    users and attackers do not always write that way.
+  approach:
+    - Write prompts with weak meaning or unusual wording, unlike the model's training data.
+    - Measure how often open models give made-up answers under each attack.
+  findings:
+    - Attacks reached up to 92.5% success in causing hallucinations in Vicuna-7B and LLaMA-2-7B-chat.
+    - Now extending the study to medical questions.
+  papers: ["MobiSecServ 2024"]

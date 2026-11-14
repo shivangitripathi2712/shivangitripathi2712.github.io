@@ -1,0 +1,16 @@
+<svg viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <rect x="24" y="44" width="84" height="64" rx="8" class="t-card"/>
+  <path d="M30 100 l24-26 18 16 12-10 18 20z" class="t-fill"/>
+  <circle cx="88" cy="62" r="7" class="t-dot"/>
+  <path d="M116 76 h22" class="t-arrow"/><path d="M132 70 l8 6 -8 6" class="t-arrow"/>
+  <rect x="146" y="58" width="44" height="7" rx="3.5" class="t-line"/>
+  <rect x="146" y="72" width="30" height="7" rx="3.5" class="t-line"/>
+  <rect x="146" y="86" width="38" height="7" rx="3.5" class="t-line"/>
+  <path d="M198 76 h22" class="t-arrow"/><path d="M214 70 l8 6 -8 6" class="t-arrow"/>
+  <rect x="228" y="44" width="84" height="64" rx="8" class="t-card"/>
+  <path d="M234 100 l24-26 18 16 12-10 18 20z" class="t-fill"/>
+  <circle cx="292" cy="62" r="7" class="t-dot"/>
+  <text x="66" y="130" class="t-lab" text-anchor="middle">scene</text>
+  <text x="168" y="130" class="t-lab" text-anchor="middle">short caption</text>
+  <text x="270" y="130" class="t-lab" text-anchor="middle">rebuilt</text>
+</svg>

@@ -1,0 +1,24 @@
+# Site settings. Profile details live here too.
+title: Shivangi Tripathi
+description: >-
+  Ph.D. candidate at Texas State University. I build methods to detect and fix
+  hallucinations in AI that reads and writes text, images, and speech.
+url: https://shivangitripathi2712.github.io
+
+author:
+  name: Shivangi Tripathi
+  role: Ph.D. Candidate in Computer Science
+  school: Texas State University
+  lab: Human AI Synergy Lab
+  advisor: Dr. Heena Rathore
+  location: San Marcos, Texas
+  email: tjk86@txstate.edu
+  scholar: https://scholar.google.com/citations?hl=en&user=F0VM8BQAAAAJ
+  linkedin: https://www.linkedin.com/in/shivangi-tripathi-62581415b/
+  github: https://github.com/shivangitripathi2712
+  photo: /assets/img/profile.jpg
+  # Set to "" to hide the badge
+  status: Open to research internships and collaborations
+
+markdown: kramdown
+exclude: [README.md, Preview]

@@ -1,207 +1,205 @@
+---
+# This page is built automatically from the files in _data/ and _config.yml.
+# You should not need to edit this file to add news, papers, or projects.
+---
+{%- assign a = site.author -%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Shivangi Tripathi — Ph.D. Candidate, Texas State University</title>
-  <meta name="description" content="Shivangi Tripathi is a Ph.D. candidate at Texas State University's Human AI Synergy Lab researching hallucination detection and mitigation in text, vision-language, and audio-language models." />
-  <meta property="og:title" content="Shivangi Tripathi — Trustworthy Multimodal AI" />
-  <meta property="og:description" content="Ph.D. candidate researching hallucination detection and mitigation across text, vision, and audio models." />
+  <title>{{ a.name }} · {{ a.role }}, {{ a.school }}</title>
+  <meta name="description" content="{{ site.description | strip }}" />
+  <meta property="og:title" content="{{ a.name }}" />
+  <meta property="og:description" content="{{ site.description | strip }}" />
   <meta property="og:type" content="website" />
-
+  <meta property="og:image" content="{{ site.url }}{{ a.photo }}" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
 </head>
-
 <body>
-  <div class="layout">
 
-    <!-- ═══ SIDEBAR: who I am + links (stays put on desktop) ═══ -->
-    <aside class="side">
-      <img class="photo" src="87584A18-F825-407B-A9EA-356D758D106C.JPG" alt="Portrait of Shivangi Tripathi" />
-      <h1>Shivangi Tripathi</h1>
-      <p class="role">Ph.D. Candidate, Computer Science<br />Texas State University</p>
-      <p class="lab">Human AI Synergy Lab<br />Advisor: Dr. Heena Rathore</p>
+<!-- ═══ Sticky navigation ═══ -->
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a href="#about" class="nav-name">{{ a.name }}</a>
+    <nav class="nav-links" id="navLinks" aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#news">News</a>
+      <a href="#publications">Publications</a>
+      <a href="#research">Research</a>
+      <a href="#background">Background</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</header>
 
-      <ul class="links">
-        <li><a href="mailto:tjk86@txstate.edu">tjk86@txstate.edu</a></li>
-        <li><a href="https://scholar.google.com/citations?hl=en&user=F0VM8BQAAAAJ" target="_blank" rel="noreferrer">Google Scholar</a></li>
-        <li><a href="https://www.linkedin.com/in/shivangi-tripathi-62581415b/" target="_blank" rel="noreferrer">LinkedIn</a></li>
-        <li class="muted">San Marcos, TX</li>
-      </ul>
+<main>
 
-      <nav class="toc" aria-label="Sections">
-        <a href="#about">About</a>
-        <a href="#news">News</a>
-        <a href="#publications">Publications</a>
-        <a href="#research">Research</a>
-        <a href="#background">Background</a>
-      </nav>
-    </aside>
+<!-- ═══ About / hero ═══ -->
+<section id="about" class="hero wrap">
+  <div class="hero-text">
+    <p class="eyebrow">{{ a.role }} · {{ a.school }}</p>
+    <h1>I build methods that <span class="hl">catch and fix AI hallucinations</span>, when models sound confident but get the facts wrong.</h1>
+    <p class="hero-sub">
+      I am a Ph.D. candidate in the {{ a.lab }} at {{ a.school }}, advised by {{ a.advisor }}.
+      My work covers three kinds of AI: models that write <b>text</b>, models that describe <b>images</b>,
+      and models that listen to <b>speech</b>. For each one, I build tests that show where the model fails
+      and methods that correct the mistakes before they reach people, with a focus on safety and health care.
+    </p>
 
-    <!-- ═══ MAIN CONTENT ═══ -->
-    <main>
+    <div class="buttons">
+      <a class="btn btn-main" href="mailto:{{ a.email }}">
+        <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Email
+      </a>
+      <a class="btn" href="{{ a.scholar }}" target="_blank" rel="noreferrer">
+        <svg viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.9V17h2V9z"/><path d="M5 13.2V17c0 1.7 3.1 3 7 3s7-1.3 7-3v-3.8"/></svg>Google Scholar
+      </a>
+      <a class="btn" href="{{ a.linkedin }}" target="_blank" rel="noreferrer">
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg>LinkedIn
+      </a>
+      <a class="btn" href="{{ a.github }}" target="_blank" rel="noreferrer">
+        <svg viewBox="0 0 24 24"><path d="M9 19c-4 1.5-4-2-6-2.5m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>GitHub
+      </a>
+    </div>
 
-      <section id="about">
-        <h2>About</h2>
-        <p>
-          I'm a third-year Ph.D. candidate at Texas State University. I study
-          <strong>hallucinations</strong> in generative AI — when models produce confident
-          but wrong output — and build methods to <strong>detect</strong> and
-          <strong>correct</strong> them in <strong>text</strong>,
-          <strong>vision-language</strong>, and <strong>audio-language</strong> models.
-        </p>
-        <p>
-          My work covers evidence-based correction of LLM text, faithful image captions for
-          safety-critical scenes, adversarial attacks that trigger hallucination, and clinical
-          audio benchmarks. I expect to graduate in 2027.
-        </p>
-        <p class="note">Open to research internships and collaborations.</p>
-      </section>
-
-      <!-- EDIT HERE: add new news items at the top -->
-      <section id="news">
-        <h2>News</h2>
-        <ul class="news">
-          <li class="new">
-            <span class="date">Nov 2026</span>
-            <span><strong>Paper accepted to EACL 2027 (Findings)!</strong>
-              <em>“MS-CAPS: Minimal Sufficient Image Captions for Safety-Critical Traffic Scene Understanding”</em>. See you in Athens!</span>
-          </li>
-          <li>
-            <span class="date">Jun 2026</span>
-            <span>Awarded a <strong>NAIRR Pilot</strong> allocation of 12,400 GPU hours on NCSA Delta for
-              “Trustworthy Vision-Language Models via Minimal Sufficient Captions for Faithful Image Generation”
-              (NAIRR260108, PI: Dr. Heena Rathore).</span>
-          </li>
-          <li>
-            <span class="date">Apr 2026</span>
-            <span>Defended my dissertation proposal and advanced to <strong>Ph.D. candidacy</strong>.</span>
-          </li>
-          <li>
-            <span class="date">Oct 2024</span>
-            <span>Passed the Ph.D. qualifying exam.</span>
-          </li>
-        </ul>
-      </section>
-
-      <!-- EDIT HERE: newest paper first -->
-      <section id="publications">
-        <h2>Publications</h2>
-        <p class="sub">Full list on <a href="https://scholar.google.com/citations?hl=en&user=F0VM8BQAAAAJ" target="_blank" rel="noreferrer">Google Scholar</a>.</p>
-
-        <ol class="pubs">
-          <li>
-            <span class="venue">EACL 2027</span>
-            <div>
-              <p class="title">MS-CAPS: Minimal Sufficient Image Captions for Safety-Critical Traffic Scene Understanding</p>
-              <p class="where">Findings of EACL, 2027 · Athens <span class="tag">New</span></p>
-              <p class="desc">A knowledge-graph-guided method that compresses image captions to the details that matter, tested by how well an image generator can rebuild the scene.</p>
-            </div>
-          </li>
-          <li>
-            <span class="venue">CCNC 2026</span>
-            <div>
-              <p class="title">Paragraph-Level Hallucination Detection for LLMs in Networked Systems</p>
-              <p class="where">IEEE CCNC, 2026</p>
-              <p class="desc">Hallucination detection for LLMs running in networked and edge settings, with metrics that account for bandwidth, latency, and resource limits.</p>
-            </div>
-          </li>
-          <li>
-            <span class="venue">DISTILL 2025</span>
-            <div>
-              <p class="title">Detecting and Correcting Hallucinations in Paragraph-Level Text with Ensemble-Based Evaluation</p>
-              <p class="where">IEEE DISTILL, 2025</p>
-              <p class="desc">Combines classifier, semantic-similarity, NLI, and LLM-judge signals to find hallucinated paragraphs and guide their revision.</p>
-            </div>
-          </li>
-          <li>
-            <span class="venue">CIOCSE 2025</span>
-            <div>
-              <p class="title">REVISE: A Framework for Paragraph-Level Misinformation Correction in Large Language Models</p>
-              <p class="where">CIOCSE, 2025</p>
-              <p class="desc">Splits paragraphs into checkable claims, retrieves evidence, and rewrites only what is wrong — keeping the rest of the text intact.</p>
-            </div>
-          </li>
-          <li>
-            <span class="venue">MobiSecServ 2024</span>
-            <div>
-              <p class="title">Assessing Hallucination in LLMs under Adversarial Attacks</p>
-              <p class="where">IEEE MobiSecServ, 2024</p>
-              <p class="desc">Measures how weak-semantic and out-of-distribution prompt attacks raise hallucination rates in Vicuna-7B and LLaMA-2-7B-chat.</p>
-            </div>
-          </li>
-        </ol>
-      </section>
-
-      <section id="research">
-        <h2>Research</h2>
-        <div class="areas">
-          <div class="area">
-            <h3>Text</h3>
-            <p>Breaking text into claims, checking them against evidence, and fixing only the wrong parts.</p>
-          </div>
-          <div class="area">
-            <h3>Vision-language</h3>
-            <p>Short, faithful image captions so that images generated from them match the real scene.</p>
-          </div>
-          <div class="area">
-            <h3>Audio-language</h3>
-            <p>Benchmarks for speech-based models, tracing how transcription errors silently affect answers in clinical settings.</p>
-          </div>
-          <div class="area">
-            <h3>Adversarial robustness</h3>
-            <p>Prompt attacks that cause hallucination, and evaluations that hold up under attack and data shift.</p>
-          </div>
-        </div>
-
-        <h3 class="minor">Selected results</h3>
-        <ul class="results">
-          <li><b>76.8%</b> correction accuracy on paragraph-level misinformation, with FactCC above 0.97 (1,400+ passages).</li>
-          <li><b>92.5%</b> peak success rate of weak-semantic prompt attacks in inducing hallucination.</li>
-          <li><b>83% F1</b> on extractive QA (SQuAD, Natural Questions), 20+ points above TF-IDF baselines.</li>
-          <li><b>+30%</b> BER improvement and 25% spectral-efficiency gain for 6G resource allocation under high mobility.</li>
-        </ul>
-      </section>
-
-      <section id="background">
-        <h2>Background</h2>
-        <ul class="bg">
-          <li>
-            <span class="date">2023 – now</span>
-            <div>
-              <p class="title">Ph.D. in Computer Science, Texas State University</p>
-              <p class="where">Doctoral Instructional Assistant · Expected 2027</p>
-            </div>
-          </li>
-          <li>
-            <span class="date">2021 – 2023</span>
-            <div>
-              <p class="title">M.Tech in Electrical Engineering, IIT Jodhpur</p>
-              <p class="where">Research Assistant, Wireless Communications Lab — 6G resource allocation, MIMO and Doppler analysis for mobile edge computing</p>
-            </div>
-          </li>
-          <li>
-            <span class="date">2017 – 2021</span>
-            <div>
-              <p class="title">B.Tech in Electronics &amp; Communication, GGSIPU, Delhi</p>
-            </div>
-          </li>
-        </ul>
-
-        <p class="outside">Outside the lab: hiking, badminton, dance workshops, and landscape photography.</p>
-      </section>
-
-      <footer>
-        © <span id="year"></span> Shivangi Tripathi · Last updated Nov 2026
-      </footer>
-    </main>
+    {%- if a.status != "" %}
+    <p class="status"><span class="pulse"></span>{{ a.status }}</p>
+    {%- endif %}
   </div>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <figure class="hero-photo">
+    <img src="{{ a.photo }}" alt="Portrait of {{ a.name }}" />
+    <figcaption>{{ a.location }}</figcaption>
+  </figure>
+</section>
+
+<!-- ═══ News ═══ -->
+{%- assign news = site.data.news | sort: "date" | reverse -%}
+<section id="news" class="wrap section">
+  <div class="sec-head">
+    <h2>News</h2>
+    <p>{{ news.size }} updates, newest first. Scroll inside the box to see more.</p>
+  </div>
+  <ol class="news-box" tabindex="0" aria-label="News">
+    {%- for n in news %}
+    {%- assign d = n.date | append: "-01" %}
+    <li class="news-item{% if forloop.first %} is-latest{% endif %}">
+      <time>{{ d | date: "%b %Y" }}</time>
+      <span class="news-type t-{{ n.type }}">{{ n.type }}</span>
+      <div class="news-text">{{ n.text | markdownify | remove: "<p>" | remove: "</p>" | strip }}{% if n.link %} <a href="{{ n.link }}" target="_blank" rel="noreferrer">Read more →</a>{% endif %}</div>
+    </li>
+    {%- endfor %}
+  </ol>
+</section>
+
+<!-- ═══ Publications ═══ -->
+{%- assign pubs = site.data.publications | sort: "year" | reverse -%}
+<section id="publications" class="wrap section">
+  <div class="sec-head">
+    <h2>Publications</h2>
+    <p>Peer-reviewed papers. The full list is on <a href="{{ a.scholar }}" target="_blank" rel="noreferrer">Google Scholar</a>.</p>
+  </div>
+  <ol class="pubs">
+    {%- for p in pubs %}
+    <li class="pub">
+      <span class="badge">{{ p.badge }}</span>
+      <div class="pub-body">
+        <h3>{{ p.title }}{% if p.new %} <span class="new">New</span>{% endif %}</h3>
+        <p class="authors">
+          {%- for name in p.authors -%}
+            {%- if name == a.name %}<b>{{ name }}</b>{% else %}{{ name }}{% endif %}{% unless forloop.last %}, {% endunless -%}
+          {%- endfor -%}
+        </p>
+        <p class="venue">{{ p.venue }}, {{ p.year }}{% if p.note %} · {{ p.note }}{% endif %}</p>
+        <p class="summary">{{ p.summary }}</p>
+        <div class="pills">
+          {%- if p.pdf and p.pdf != "" %}<a class="pill" href="{{ p.pdf }}" target="_blank" rel="noreferrer">PDF</a>{% endif %}
+          {%- if p.code and p.code != "" %}<a class="pill" href="{{ p.code }}" target="_blank" rel="noreferrer">Code</a>{% endif %}
+          {%- if p.slides and p.slides != "" %}<a class="pill" href="{{ p.slides }}" target="_blank" rel="noreferrer">Slides</a>{% endif %}
+          <button class="pill cite" type="button" data-cite="bib-{{ p.key }}">Cite</button>
+        </div>
+        <template id="bib-{{ p.key }}">@inproceedings{% raw %}{{% endraw %}{{ p.key }},
+  title     = {% raw %}{{% endraw %}{{ p.title }}{% raw %}}{% endraw %},
+  author    = {% raw %}{{% endraw %}{{ p.authors | join: " and " }}{% raw %}}{% endraw %},
+  booktitle = {% raw %}{{% endraw %}{{ p.venue }}{% raw %}}{% endraw %},
+  year      = {% raw %}{{% endraw %}{{ p.year }}{% raw %}}{% endraw %}
+}</template>
+      </div>
+    </li>
+    {%- endfor %}
+  </ol>
+</section>
+
+<!-- ═══ Research ═══ -->
+<section id="research" class="wrap section">
+  <div class="sec-head">
+    <h2>Research</h2>
+    <p>One question runs through all my projects: when an AI model produces something, can we trust it, and if not, can we fix it? Click a card for details.</p>
+  </div>
+  <div class="cards">
+    {%- for r in site.data.research %}
+    <button class="card" type="button" data-open="dlg-{{ r.id }}">
+      <div class="thumb th-{{ r.thumb }}">{% include thumbs/{{ r.thumb }}.svg %}</div>
+      <div class="card-body">
+        <div class="card-meta"><span>{{ r.tag }}</span><span class="st st-{{ r.status | downcase }}">{{ r.status }}</span></div>
+        <h3>{{ r.title }}</h3>
+        <p>{{ r.takeaway }}</p>
+        <span class="more">Read more →</span>
+      </div>
+    </button>
+
+    <dialog class="modal" id="dlg-{{ r.id }}" aria-labelledby="dlg-{{ r.id }}-t">
+      <div class="modal-in">
+        <button class="close" type="button" aria-label="Close">×</button>
+        <div class="thumb th-{{ r.thumb }}">{% include thumbs/{{ r.thumb }}.svg %}</div>
+        <div class="card-meta"><span>{{ r.tag }}</span><span class="st st-{{ r.status | downcase }}">{{ r.status }}</span></div>
+        <h3 id="dlg-{{ r.id }}-t">{{ r.title }}</h3>
+        <h4>The problem</h4>
+        <p>{{ r.problem }}</p>
+        <h4>What I do</h4>
+        <ol>{% for s in r.approach %}<li>{{ s }}</li>{% endfor %}</ol>
+        <h4>Results so far</h4>
+        <ul>{% for s in r.findings %}<li>{{ s }}</li>{% endfor %}</ul>
+        {%- if r.papers.size > 0 %}
+        <h4>Papers</h4>
+        <p class="modal-badges">{% for b in r.papers %}<a class="badge" href="#publications">{{ b }}</a> {% endfor %}</p>
+        {%- endif %}
+      </div>
+    </dialog>
+    {%- endfor %}
+  </div>
+</section>
+
+<!-- ═══ Background ═══ -->
+<section id="background" class="wrap section">
+  <div class="sec-head">
+    <h2>Background</h2>
+    <p>Degrees and key milestones.</p>
+  </div>
+  <ol class="timeline">
+    {%- for t in site.data.timeline %}
+    <li class="{% if t.now %}is-now{% endif %}">
+      <span class="when">{{ t.when }}</span>
+      <div><p class="tl-title">{{ t.title }}</p><p class="tl-where">{{ t.where }}</p></div>
+    </li>
+    {%- endfor %}
+  </ol>
+  <p class="outside">Outside the lab, I hike, play badminton, take dance workshops, and photograph landscapes.</p>
+</section>
+
+</main>
+
+<footer class="wrap footer">
+  <span>© {{ site.time | date: "%Y" }} {{ a.name }}</span>
+  <span><a href="mailto:{{ a.email }}">{{ a.email }}</a> · Updated {{ site.time | date: "%b %Y" }}</span>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="/assets/js/main.js"></script>
 </body>
 </html>
