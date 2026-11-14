@@ -54,11 +54,3 @@
     - Attacks on Vicuna-7B and LLaMA-2-7B-chat succeeded up to 92.53% of the time.
   papers: [MobiSecServ 2024]
 
-- title: Multimodal AI for aerial disaster assessment
-  dates: Ongoing
-  text: >-
-    I am building a pipeline that turns aerial images of disaster areas into
-    structured information for rapid damage assessment, and that stays reliable
-    when viewpoint, object size, and lighting change.
-  results: []
-  papers: []
