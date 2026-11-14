@@ -5,7 +5,7 @@ Edit one text file on GitHub, click *Commit changes*, and the site updates in ab
 
 | To change…                         | Edit this file              |
 |------------------------------------|-----------------------------|
-| News                               | `_data/news.yml`            |
+| Updates                            | `_data/news.yml`            |
 | Papers                             | `_data/publications.yml`    |
 | Research                           | `_data/research.yml`        |
 | Teaching                           | `_data/teaching.yml`        |
@@ -14,7 +14,7 @@ Edit one text file on GitHub, click *Commit changes*, and the site updates in ab
 | Name, email, links, CV PDF         | `_config.yml`               |
 | Photo                              | replace `assets/img/profile.jpg` |
 
-## Add a news item
+## Add an update
 Open `_data/news.yml`, click the pencil icon, and paste this anywhere in the list:
 
 ```yaml
