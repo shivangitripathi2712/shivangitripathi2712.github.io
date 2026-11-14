@@ -88,13 +88,6 @@
         {%- if p.pdf and p.pdf != "" %} <a href="{{ p.pdf }}">[PDF]</a>{% endif %}
         {%- if p.code and p.code != "" %} <a href="{{ p.code }}">[Code]</a>{% endif %}
         {%- if p.slides and p.slides != "" %} <a href="{{ p.slides }}">[Slides]</a>{% endif %}
-        <a href="#" class="bib" data-bib="bib-{{ p.key }}">[BibTeX]</a>
-        <pre class="bibtex" id="bib-{{ p.key }}" hidden>@inproceedings{% raw %}{{% endraw %}{{ p.key }},
-  title     = {% raw %}{{% endraw %}{{ p.title }}{% raw %}}{% endraw %},
-  author    = {% raw %}{{% endraw %}{{ p.authors | join: " and " }}{% raw %}}{% endraw %},
-  booktitle = {% raw %}{{% endraw %}{{ p.venue }}{% raw %}}{% endraw %},
-  year      = {% raw %}{{% endraw %}{{ p.year }}{% raw %}}{% endraw %}
-}</pre>
       </li>
       {%- endfor %}
     </ol>
@@ -149,14 +142,5 @@
   <footer>Last updated {{ site.time | date: "%B %Y" }}.</footer>
 </div>
 
-<script>
-  document.querySelectorAll('a.bib').forEach(function (a) {
-    a.addEventListener('click', function (e) {
-      e.preventDefault();
-      var pre = document.getElementById(a.getAttribute('data-bib'));
-      pre.hidden = !pre.hidden;
-    });
-  });
-</script>
 </body>
 </html>

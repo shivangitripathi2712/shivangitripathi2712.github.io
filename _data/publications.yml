@@ -8,8 +8,6 @@
 #   pdf / code / slides: optional links. A button appears only if filled in.
 #   key:     a short unique id, used for the BibTeX entry
 #
-# The [Cite] button builds BibTeX from these fields and copies it.
-# TODO: fill in co-authors where marked, and add PDF links.
 # ─────────────────────────────────────────────────────────────
 
 - key: tripathi2027mscaps
@@ -28,9 +26,9 @@
 - key: tripathi2026ccnc
   year: 2026
   badge: CCNC 2026
-  title: "Paragraph-Level Hallucination Detection for LLMs in Networked Systems"
-  authors: ["Shivangi Tripathi"]      # TODO: add co-authors
-  venue: "IEEE Consumer Communications & Networking Conference (CCNC)"
+  title: "Paragraph-Level Hallucination Detection and Correction for Trustworthy Large Language Models in Networked Systems"
+  authors: ["Shivangi Tripathi", "Teancy Jennifer", "Henry Griffith", "Heena Rathore"]
+  venue: "IEEE 23rd Consumer Communications & Networking Conference (CCNC)"
   summary: >-
     Detects hallucinated paragraphs when language models run on networks and
     edge devices, where bandwidth, delay, and computing power are limited.
@@ -41,8 +39,8 @@
   year: 2025
   badge: DISTILL 2025
   title: "Detecting and Correcting Hallucinations in Paragraph-Level Text with Ensemble-Based Evaluation"
-  authors: ["Shivangi Tripathi"]      # TODO: add co-authors
-  venue: "IEEE Workshop on Distributed, Secure, and Trustworthy Intelligence with LLMs (DISTILL), co-located with IEEE TPS 2025"
+  authors: ["Shivangi Tripathi", "Heena Rathore"]
+  venue: "IEEE 7th International Conference on Trust, Privacy and Security in Intelligent Systems and Applications (TPS-ISA), DISTILL Workshop"
   summary: >-
     Combines four kinds of checks (a trained classifier, meaning similarity,
     logical entailment, and an LLM judge) to find wrong paragraphs and guide
@@ -67,8 +65,8 @@
   year: 2024
   badge: MobiSecServ 2024
   title: "Assessing Hallucination in Large Language Models Under Adversarial Attacks"
-  authors: ["Shivangi Tripathi"]      # TODO: add co-authors
-  venue: "IEEE International Conference on Mobile and Secure Services (MobiSecServ)"
+  authors: ["Shivangi Tripathi", "Henry Griffith", "Heena Rathore"]
+  venue: "Ninth International Conference on Mobile and Secure Services (MobiSecServ)"
   summary: >-
     Measures how much more often open models such as Vicuna-7B and
     LLaMA-2-7B-chat make things up when their prompts are subtly attacked.

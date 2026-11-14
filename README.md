@@ -26,7 +26,7 @@ Items are sorted by date automatically. Only the month is shown.
 
 ## Add a paper
 Copy one block in `_data/publications.yml` and edit it. Add `pdf:` or `code:` links to show those buttons.
-The **[BibTeX]** link builds BibTeX from the title, authors, venue, and year.
+
 
 ## Tip
 YAML is picky about spaces: keep the same indentation as the other items, and do not use tabs.
