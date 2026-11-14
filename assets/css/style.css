@@ -32,8 +32,8 @@ h3 { font-size: 17px; font-weight: 700; margin-top: 16px; margin-bottom: 2px; }
 
 /* news, teaching, education */
 .news { list-style: none; padding: 0; margin: 0; }
-.news li { display: grid; grid-template-columns: 150px 1fr; gap: 16px; padding: 5px 0; }
-.date { color: #444; white-space: nowrap; }
+.news > li { display: grid; grid-template-columns: 170px 1fr; gap: 16px; padding: 5px 0; }
+.date { color: #444; }
 
 /* publications */
 .pubs { padding-left: 24px; margin: 0; }
@@ -51,6 +51,11 @@ footer { margin-top: 48px; padding-top: 12px; border-top: 1px solid #ddd; color:
   .header { flex-direction: column; align-items: flex-start; gap: 16px; }
   .photo { width: 120px; height: 120px; }
   .nav a { display: inline-block; margin: 2px 16px 2px 0; }
-  .news li { grid-template-columns: 1fr; gap: 0; padding: 6px 0; }
+  .news > li { grid-template-columns: 1fr; gap: 0; padding: 6px 0; }
   .date { font-weight: 600; }
 }
+
+/* experience details */
+.details { margin: 4px 0 0; padding-left: 20px; }
+.details li { display: list-item; padding: 0; }
+.news li .details li { display: list-item; }

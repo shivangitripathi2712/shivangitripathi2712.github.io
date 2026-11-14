@@ -9,6 +9,7 @@ Edit one text file on GitHub, click *Commit changes*, and the site updates in ab
 | Papers                             | `_data/publications.yml`    |
 | Research                           | `_data/research.yml`        |
 | Teaching                           | `_data/teaching.yml`        |
+| Experience                         | `_data/experience.yml`      |
 | Education                          | `_data/education.yml`       |
 | Name, email, links                 | `_config.yml`               |
 | Photo                              | replace `assets/img/profile.jpg` |
