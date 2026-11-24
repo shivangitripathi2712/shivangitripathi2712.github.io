@@ -20,6 +20,17 @@
     - Up to 98% of outputs accepted (49 of 50 scenes) with 62.5% average caption reduction.
   papers: [EACL 2027]
 
+- title: Disaster damage summaries from satellite images
+  dates: 2026
+  text: >-
+    After a disaster, responders need short, correct reports of what was
+    damaged and where. I study how vision-language models read before-and-after
+    satellite images, and which damage representations help them report damage
+    type, location, and building counts without making things up.
+  results:
+    - Built question-answer data from xBD building-damage labels.
+  papers: [ICNC 2027]
+
 - title: Hallucinations in clinical speech
   dates: 2025 – present
   text: >-

@@ -23,6 +23,19 @@
   pdf: ""
   code: ""
 
+- key: tripathi2027icnc
+  year: 2027
+  badge: ICNC 2027
+  title: "Spatially Grounded Disaster Summarization: Evaluating Damage Representations for Vision-Language Models"
+  authors: ["Shivangi Tripathi", "Heena Rathore"]
+  venue: "IEEE International Conference on Computing, Networking and Communications (ICNC), AI and Applications Symposium"
+  summary: >-
+    Tests how well vision-language models describe disaster damage from
+    before-and-after satellite images, and which ways of showing the damage
+    help them report its type, location, and number of damaged buildings.
+  pdf: ""
+  code: ""
+
 - key: tripathi2026ccnc
   year: 2026
   badge: CCNC 2026
